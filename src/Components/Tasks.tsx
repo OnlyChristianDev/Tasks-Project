@@ -1,14 +1,21 @@
-export function Tasks(){
+"use client"; 
+import { useState } from "react"
+
+export function Tasks() {
+    const [tasks, SetTasks] = useState(3) 
+    const taskNumber = () => {
+        SetTasks(4)
+    }
     return (
-        <div className="flex gap-10 items-center justify-center">
-            <div className="bg-gray-100 rounded-md  w-[33%] h-96">
-                <div className="pl-4 pt-4">Á Fazer</div>
+        <div className="task">
+            <div className="modelTask">
+                <div className="tittleTask">Á FAZER</div> <div className="pt-4 font-medium">{tasks}</div>
             </div>
-            <div >
-                <div className="pl-4 pt-4">Em andamento</div>
+            <div className="modelTask">
+                <div className="tittleTask">EM ANDAMENTO</div> <div className="pt-4 font-medium">{tasks}</div>
             </div>
-            <div>
-                <div className="pl-4 pt-4">Concluidas</div>
+            <div className="modelTask">
+                <div className="tittleTask">CONCLUÍDAS</div> <div className="pt-4 font-medium">{tasks}</div>
             </div>
         </div>
     )
