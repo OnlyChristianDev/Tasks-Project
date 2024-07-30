@@ -8,7 +8,7 @@ export function Tasks() {
     }
     return (
         <div className="task">
-            <div className="modelTask">
+            <div className="modelTask ">
                 <div className="tittleTask">Á FAZER</div> <div className="pt-4 font-medium">{tasks}</div>
             </div>
             <div className="modelTask">
